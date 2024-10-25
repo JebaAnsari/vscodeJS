@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html events</title>
+    <style>
+      li {
+        width: 55rem;
+        height: 10rem;
+        margin: 5px;
+        display: flex;
+      }
+
+      #first {
+        background-color: yellowgreen;
+      }
+      #second {
+        background-color: green;
+      }
+      #third {
+        background-color: red;
+      }
+      #fourth {
+        background-color: blueviolet;
+      }
+      #fifth {
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Amazing Events</h2>
+    <div>
+      <ul id="images">
+        <li id="first"></li>
+        <li id="second"></li>
+        <li id="third"></li>
+        <li id="fourth"></li>
+        <li id="fifth">
+          <a href="https://www.google.com/" id="google">Google</a>
+        </li>
+      </ul>
+    </div>
+   <script>
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target);
+        console.log(e.target.tagName);
+        let removeit = e.target;
+        removeit.remove();
+    })
+   </script>
+  </body>
+</html>

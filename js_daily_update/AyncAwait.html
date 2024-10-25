@@ -1,0 +1,45 @@
+<!-- notes 
+ async await
+ settimeout function firstly it needs handler -> a callback ,function  and secondthig is timeout which is a number  
+ syntax -
+ setTimeout(function(){
+ define function here
+ },2000) // 2000 means 2sec
+ 
+ setInterval means it executes repeatedly after given period of time
+
+ clearTimeout -> to stop the setTimeout and it needs refernce whch one need to stop
+-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Awaits</title>
+ </head>
+ <body>
+    <h2>Asyn Awaits setTimeout</h2>
+    <!-- <h1>Hey please change me</h1> -->
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+   
+
+    <script>
+        const start = function(){
+            console.log('started printing !..');
+        }
+        document.querySelector('#start').addEventListener('click',function(){
+          let event =   setInterval(start,1000);
+        })
+    
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearInterval(event);
+            console.log('stopped successfully');
+        })
+
+       
+
+
+    </script>
+ </body>
+ </html>

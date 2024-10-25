@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            width: 60px;
+            height: 60px;
+            border: 1px solid black;
+            margin: 5px;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+        }
+        #grey{
+            background-color: gray;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #purple{
+            background-color: purple;
+        }
+        #white{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Changer</h1>
+    <div class="button" id="grey"></div>
+    <div class="button" id="white"></div>
+    <div class="button" id="yellow"></div>
+    <div class="button" id="purple"></div>
+
+    <script>
+       const buttons  = document.querySelectorAll('.button');
+        const body = document.querySelector('body');
+       
+       buttons.forEach(function (button) {
+        button.addEventListener('click',function(e){
+           if(e.target.id==="grey"){
+            body.style.backgroundColor=e.target.id;
+           }
+           if(e.target.id==="white"){
+            body.style.backgroundColor=e.target.id;
+           }
+           if(e.target.id==="yellow"){
+            body.style.backgroundColor=e.target.id;
+           }
+           if(e.target.id==="purple"){
+            body.style.backgroundColor=e.target.id;
+           }
+        })
+       });
+       
+
+       
+
+    </script>
+</body>
+</html>

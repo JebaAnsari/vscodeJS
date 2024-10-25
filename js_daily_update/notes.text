@@ -1,0 +1,50 @@
+Js execution 
+global execution
+    |
+    this
+    |
+    Memeory Phase
+    |
+    Execution Phase
+control flow -> if/else 
+?? operator -> for aviding null values
+ternary oprator -> ?
+syntax -> condition ? true:false
+
+loops ->for , forEach(),
+
+forin loop is used for objects
+forEach loop 
+filter() -> it gives callback
+
+inner.HTML also shows html content nut inner.text does not 
+
+Promise notes 
+A promise is created using the Promise constructor, which takes a single function (executor) as an argument. This function receives two parameters: resolve and reject.
+
+// Q and bluebird are two libraries used in js with bluebird we use functionlity like ftech,catch,finally etc.
+// Promises has two states (resolve and reject)-> Promise constructor. The correct order should be (resolve, reject) instead of (reject, resolve).
+// reject is concerned with .then not quite correct 
+// Use .then() to handle successful outcomes.Use .catch() (or the second argument of .then()) to handle errors (rejections).
+// So, while .then() can handle rejections if provided with a second function, it's more common and clearer to use .catch() for that purpose.
+// Calling both resolve() and reject() in a promise will not produce an error, but only one of them will have any effect. Here’s what happens:
+// to store Promise in variable is not neccessary
+// if we pass any parametere in resolve then we can get in .then function as an argument
+So, while setTimeout is useful for demonstrations, it's not a requirement for promises.
+
+Summary of Key Points
+Promise Constructor: new Promise((resolve, reject) => { /* async operation */ })
+Resolving: Call resolve(value) when the operation is successful.
+Rejecting: Call reject(error) when the operation fails.
+Handling Results: Use .then() for success and .catch() for errors.
+Chaining: You can chain multiple .then() calls.
+Async/Await: Use async functions and await for a more synchronous-looking code flow.
+
+
+fake apis's 
+// fetch('https://api.github.com/users/mojombo')
+// fetch('https://api.github.com/users/hiteshchoudhary')
+fetch('https://api.github.com/users/JebaAnsari')
+https://jsonplaceholder.typicode.com/users
+
+// CALLBACKS
