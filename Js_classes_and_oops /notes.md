@@ -21,5 +21,6 @@ on defining new keyword a new empty object created -> instance
 
 <!-- Call Bind and Apply -->
 .call method is used to hold the reference  of calling function 
+Static keyword stops to acces method from a function 
 
 
