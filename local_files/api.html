@@ -17,7 +17,17 @@
             border-radius: 8px;
             padding: 16px;
             width: 200px;
+            height: 150px;
+            vertical-align: top;
+            box-sizing: border-box;
+            box-shadow: inset;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 8px;
+            display: inline-block;
+
         }
         .heading {
             font-size: 18px;
@@ -32,7 +42,8 @@
             cursor: pointer;
         }
         .btn:hover {
-            background-color: #0056b3;
+            background-color: black;
+            color: white;
         }
     </style>
   </head>
@@ -44,7 +55,7 @@
       </nav>
       <h1>Repository Call via API</h1>
 
-      <div class="container card-container " id="card-container">
+      <div class="container card-container" id="card-container">
         <!--  content will be created by js -->
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -52,7 +63,8 @@
     <script>
         async function fetchData() {
     try {
-        const usernames = ['JebaAnsari', 'hiteshchoudhary'];
+        const usernames = ['defunkt', 'mojombo'];
+        // const usernames = ['mojombo'];
         const mainCard = document.querySelector('#card-container');
 
         for (let username of usernames) {
