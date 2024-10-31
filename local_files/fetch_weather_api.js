@@ -28,16 +28,30 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&app
 .then((response)=>{
     if(!response.ok){
         throw new Error("something went wrong");
-        
     }
     else  return response.json();
    
 })
 .then((data)=>{
+    
+    const card = document.getElementById('card-container');
+    const div = document.createElement('div');
+    const title = document.createElement('h3');
+    const p = document.createElement('p');
+    
+    console.log(data);
+    div.className = 'card';
+    title.className = 'heading';
+    p.textContent = `description : ${data.weather[0]?.description}`;
+    // p.textContent = data.sys.country;
+    title.textContent = `'Temprature':${data.main.temp}C`;
     console.log(data.clouds);
     console.log(data.sys.country);
     console.log(data.name);
     console.log(data.main.pressure);
+    div.appendChild(p);
+    div.appendChild(title);
+    card.appendChild(div);
 })
 .catch((error)=>{
     console.log('E: API does not work',error);
