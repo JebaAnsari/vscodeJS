@@ -17,11 +17,14 @@ body{
     box-shadow: inset;
     margin: 10px;
     padding: 6px;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     
 }
-.heading{
-
+h3{
+     text-align: -webkit-center;;
 }
 .para{
  
