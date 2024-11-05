@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style_expense.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <!-- Income Section -->
+    <div class="input-section">
+      <h2>Add Income</h2>
+      <input type="text" id="income-description" placeholder="Description">
+      <input type="number" id="income-amount" placeholder="Amount">
+      <button id="add-income-btn">Add Income</button>
+    </div>
+
+    <!-- Expense Section -->
+    <div class="input-section">
+      <h2>Add Expense</h2>
+      <input type="text" id="expense-description" placeholder="Description">
+      <input type="number" id="expense-amount" placeholder="Amount">
+      <button id="add-expense-btn">Add Expense</button>
+    </div>
+
+    <!-- Totals Section -->
+    <div class="totals">
+      <p>Total Income: $<span id="total-income">0</span></p>
+      <p>Total Expenses: $<span id="total-expenses">0</span></p>
+      <p>Balance: $<span id="balance">0</span></p>
+    </div>
+
+    <!-- Chart Section -->
+    <!-- Chart Section -->
+<canvas id="chart" width="400" height="400"></canvas>
+
+  </div>
+
+  <script src="script_expense.js"></script>
+</body>
+</html>
